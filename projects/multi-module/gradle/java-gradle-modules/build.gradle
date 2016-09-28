@@ -1,3 +1,6 @@
+apply plugin: 'java'
+apply plugin: 'org.sonarqube'
+
 allprojects {
   ext.baseVersion = "0.1"
   ext.snapshotVersion = true
@@ -14,10 +17,7 @@ sonarqube {
 }
 
 subprojects {
-  plugins {
-  id "java"
-  id "org.sonarqube" version "2.1"
-}
+  apply plugin: 'java'
 }
 
 buildscript {
@@ -33,9 +33,4 @@ buildscript {
     dependencies {
       classpath 'org.sonarsource.scanner.gradle:sonarqube-gradle-plugin:2.1'
     }
-}
-
-plugins {
-  id "java"
-  id "org.sonarqube" version "2.1"
 }
