@@ -1,5 +1,7 @@
-apply plugin: 'java'
-apply plugin: 'org.sonarqube'
+plugins {
+  id "java"
+  id "org.sonarqube" version "2.1"
+}
 
 allprojects {
   ext.baseVersion = "0.1"
